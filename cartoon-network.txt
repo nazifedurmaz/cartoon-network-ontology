@@ -1,0 +1,415 @@
+========================================================
+  CARTOON NETWORK ÇİZGİ FİLM ONTOLOJİSİ
+  TERİMLER LİSTESİ
+  Versiyon: 2.0.0
+  Namespace: http://www.semanticweb.org/ontologies/2024/cartoonnetwork#
+========================================================
+
+-----------------------
+  SINIFLAR (Classes)
+-----------------------
+
+cn:ÇizgiFilm
+  Tanım    : Cartoon Network yayın platformunda gösterilen animasyon yapımlarının üst sınıfı.
+  İngilizce: Cartoon
+
+cn:AksiyonDizisi
+  Tanım    : Aksiyon, dövüş ve macera öğeleri ağır basan çizgi film dizileri.
+  Alt sınıf: cn:ÇizgiFilm
+  İngilizce: Action Series
+
+cn:KomediDizisi
+  Tanım    : Mizah ve komedi öğeleri öne çıkan çizgi film dizileri.
+  Alt sınıf: cn:ÇizgiFilm
+  İngilizce: Comedy Series
+
+cn:BilimKurguDizisi
+  Tanım    : Gelecek, uzay ve teknoloji temalarını işleyen çizgi film dizileri.
+  Alt sınıf: cn:ÇizgiFilm
+  İngilizce: Sci-Fi Series
+
+cn:FanteziDizisi
+  Tanım    : Büyü, fantastik dünyalar ve olağanüstü varlıklar içeren çizgi film dizileri.
+  Alt sınıf: cn:ÇizgiFilm
+  İngilizce: Fantasy Series
+
+cn:Karakter
+  Tanım    : Bir çizgi filmde yer alan kurgusal varlık.
+  İngilizce: Character
+
+cn:Kahraman
+  Tanım    : İyi tarafta konumlanan, hikayenin ana kahramanı olan karakter.
+  Alt sınıf: cn:Karakter
+  İngilizce: Hero / Protagonist
+
+cn:KötüAdam
+  Tanım    : Antagonist rol üstlenen, kötücül amaçlara sahip karakter.
+  Alt sınıf: cn:Karakter
+  İngilizce: Villain / Antagonist
+
+cn:YanKarakter
+  Tanım    : Ana hikayeyi destekleyen, ikincil önem taşıyan karakter.
+  Alt sınıf: cn:Karakter
+  İngilizce: Supporting Character
+
+cn:YapımcıŞirket
+  Tanım    : Çizgi filmin yapımını üstlenen animasyon stüdyosu veya şirketi.
+  İngilizce: Production Company
+
+cn:Yaratıcı
+  Tanım    : Bir çizgi filmin temel konseptini geliştiren kişi veya ekip.
+  İngilizce: Creator / Show Runner
+
+cn:Ödül
+  Tanım    : Çizgi filmlerin kazandığı ulusal veya uluslararası ödüller.
+  İngilizce: Award
+
+cn:Platform
+  Tanım    : Çizgi filmlerin yayınlandığı dijital veya fiziksel platform.
+  İngilizce: Platform
+
+cn:Ülke
+  Tanım    : Çizgi filmin yapımının gerçekleştirildiği ülke.
+  İngilizce: Country
+
+cn:Müzik
+  Tanım    : Bir çizgi filme ait müzik, tema veya soundtrack.
+  İngilizce: Music / Soundtrack
+
+cn:Bölüm
+  Tanım    : Bir çizgi film serisinin tek bir yayın birimi.
+  İngilizce: Episode
+
+cn:SesOyuncusu
+  Tanım    : Bir karaktere sesini veren oyuncu.
+  İngilizce: Voice Actor
+
+cn:Hayran
+  Tanım    : Bir çizgi filmin hayran kitlesini temsil eden birey.
+  İngilizce: Fan
+
+cn:Tema
+  Tanım    : Bir çizgi filmde işlenen ana konu veya mesaj.
+  İngilizce: Theme
+
+cn:Yayıncı
+  Tanım    : Çizgi filmi yayınlayan televizyon kanalı veya platform.
+  İngilizce: Broadcaster
+
+---------------------------------
+  NESNE ÖZELLİKLERİ (Object Properties)
+---------------------------------
+
+cn:karakteriVar
+  Tanım    : Bir çizgi filmin içerdiği karakteri belirtir.
+  Alan     : cn:ÇizgiFilm → cn:Karakter
+  İngilizce: has character
+
+cn:karakterdeÇıktığıFilm
+  Tanım    : Bir karakterin yer aldığı çizgi filmi belirtir. (karakteriVar'ın tersi)
+  Alan     : cn:Karakter → cn:ÇizgiFilm
+  İngilizce: appears in
+
+cn:tarafındanYaratıldı
+  Tanım    : Çizgi filmin yaratıcısını belirtir.
+  Alan     : cn:ÇizgiFilm → cn:Yaratıcı
+  İngilizce: created by
+
+cn:tarafındanYapıldı
+  Tanım    : Çizgi filmin yapımcı şirketini belirtir.
+  Alan     : cn:ÇizgiFilm → cn:YapımcıŞirket
+  İngilizce: produced by
+
+cn:arkadaşı
+  Tanım    : İki karakter arasındaki dostluk ilişkisini ifade eder. (Simetrik)
+  Alan     : cn:Karakter → cn:Karakter
+  İngilizce: friend of
+
+cn:düşmanı
+  Tanım    : İki karakter arasındaki düşmanlık ilişkisini ifade eder. (Simetrik)
+  Alan     : cn:Karakter → cn:Karakter
+  İngilizce: enemy of
+
+cn:mentoru
+  Tanım    : Bir karakterin rehberlik ettiği diğer karakteri belirtir.
+  Alan     : cn:Karakter → cn:Karakter
+  İngilizce: mentor of
+
+cn:ailesi
+  Tanım    : İki karakter arasındaki aile ilişkisini belirtir.
+  Alan     : cn:Karakter → cn:Karakter
+  İngilizce: family of
+
+cn:yayınlandığı
+  Tanım    : Çizgi filmin yayınlandığı platformu belirtir.
+  Alan     : cn:ÇizgiFilm → cn:Platform
+  İngilizce: aired on
+
+cn:ülkedeÇekildi
+  Tanım    : Çizgi filmin yapıldığı ülkeyi belirtir.
+  Alan     : cn:ÇizgiFilm → cn:Ülke
+  İngilizce: produced in
+
+cn:müziğiVar
+  Tanım    : Çizgi filme ait müziği belirtir.
+  Alan     : cn:ÇizgiFilm → cn:Müzik
+  İngilizce: has music
+
+cn:ödülKazandı
+  Tanım    : Çizgi filmin kazandığı ödülü belirtir.
+  Alan     : cn:ÇizgiFilm → cn:Ödül
+  İngilizce: won award
+
+cn:spinOffuVar
+  Tanım    : Bir çizgi filmin spin-off yapımını belirtir.
+  Alan     : cn:ÇizgiFilm → cn:ÇizgiFilm
+  İngilizce: has spin-off
+
+cn:devamıVar
+  Tanım    : Bir çizgi filmin devam yapımını belirtir.
+  Alan     : cn:ÇizgiFilm → cn:ÇizgiFilm
+  İngilizce: has sequel
+
+cn:öncesiVar
+  Tanım    : Bir çizgi filmin önceki yapımını belirtir.
+  Alan     : cn:ÇizgiFilm → cn:ÇizgiFilm
+  İngilizce: has prequel
+
+cn:ilhamKaynağı
+  Tanım    : Bir çizgi filmin ilham aldığı yapımı belirtir.
+  Alan     : cn:ÇizgiFilm → cn:ÇizgiFilm
+  İngilizce: inspired by
+
+cn:sesiVerdi
+  Tanım    : Bir ses oyuncusunun seslendirdiği karakteri belirtir.
+  Alan     : cn:SesOyuncusu → cn:Karakter
+  İngilizce: voiced by
+
+cn:temasıVar
+  Tanım    : Bir çizgi filmde işlenen temayı belirtir.
+  Alan     : cn:ÇizgiFilm → cn:Tema
+  İngilizce: has theme
+
+cn:yayıncısı
+  Tanım    : Çizgi filmi yayınlayan kanalı veya platformu belirtir.
+  Alan     : cn:ÇizgiFilm → cn:Yayıncı
+  İngilizce: broadcast by
+
+cn:bölümüVar
+  Tanım    : Bir çizgi filmin bölümünü belirtir.
+  Alan     : cn:ÇizgiFilm → cn:Bölüm
+  İngilizce: has episode
+
+---------------------------------
+  VERİ ÖZELLİKLERİ (Data Properties)
+---------------------------------
+
+cn:yayınYılı
+  Tanım    : Çizgi filmin ilk yayın yılı.
+  Alan     : cn:ÇizgiFilm → xsd:integer
+  İngilizce: air year
+
+cn:bitişYılı
+  Tanım    : Çizgi filmin yayın hayatını sonlandırdığı yıl.
+  Alan     : cn:ÇizgiFilm → xsd:integer
+  İngilizce: end year
+
+cn:sezonSayısı
+  Tanım    : Çizgi filmin toplam sezon sayısı.
+  Alan     : cn:ÇizgiFilm → xsd:integer
+  İngilizce: number of seasons
+
+cn:bölümSayısı
+  Tanım    : Çizgi filmin toplam bölüm sayısı.
+  Alan     : cn:ÇizgiFilm → xsd:integer
+  İngilizce: number of episodes
+
+cn:imdbPuanı
+  Tanım    : Çizgi filmin IMDb üzerindeki kullanıcı puanı.
+  Alan     : cn:ÇizgiFilm → xsd:float
+  İngilizce: IMDb rating
+
+cn:yaşSınırı
+  Tanım    : Çizgi filmin önerilen izleyici yaş sınırı.
+  Alan     : cn:ÇizgiFilm → xsd:string
+  İngilizce: age rating
+
+cn:dil
+  Tanım    : Çizgi filmin orijinal dili.
+  Alan     : cn:ÇizgiFilm → xsd:string
+  İngilizce: language
+
+cn:bölümSüresi
+  Tanım    : Bir bölümün dakika cinsinden ortalama süresi.
+  Alan     : cn:ÇizgiFilm → xsd:integer
+  İngilizce: episode duration
+
+cn:isim
+  Tanım    : Karakterin tam adı.
+  Alan     : cn:Karakter → xsd:string
+  İngilizce: name
+
+cn:karakterYaşı
+  Tanım    : Karakterin yaşı.
+  Alan     : cn:Karakter → xsd:integer
+  İngilizce: character age
+
+cn:karakterCinsiyet
+  Tanım    : Karakterin cinsiyeti.
+  Alan     : cn:Karakter → xsd:string
+  İngilizce: character gender
+
+cn:ülke
+  Tanım    : Yapımcı şirketin bulunduğu ülke.
+  Alan     : cn:YapımcıŞirket → xsd:string
+  İngilizce: country
+
+---------------------------------
+  BİREYLER - ÇİZGİ FİLMLER
+---------------------------------
+
+Fantezi Dizileri:
+  cn:AdventureTime         → Macera Zamanı        (2010-2018, 10 sezon, IMDb: 8.6)
+  cn:OverTheGardenWall     → Bahçe Duvarının Ötesi (2014-2014,  1 sezon, IMDb: 8.7)
+
+Aksiyon Dizileri:
+  cn:StevenUniverse        → Steven Evren          (2013-2019,  5 sezon, IMDb: 8.2)
+  cn:SamuraiJack           → Samuray Jack          (2001-2017,  5 sezon, IMDb: 8.5)
+  cn:ThePowerpuffGirls     → Güçlü Kızlar          (1998-2005,  6 sezon, IMDb: 7.9)
+  cn:TeenTitans            → Genç Titanlar         (2003-2006,  5 sezon, IMDb: 7.8)
+  cn:StarWarsTheCloneWars  → Yıldız Savaşları      (2008-2020,  7 sezon, IMDb: 8.4)
+  cn:SymbionicTitan        → Symbiotik Titan       (2010-2011,  1 sezon, IMDb: 7.8)
+
+Komedi Dizileri:
+  cn:DextersLaboratory     → Dexter'ın Lab.        (1996-2003,  4 sezon, IMDb: 7.8)
+  cn:RegularShow           → Sıradan Gösteri       (2010-2017,  8 sezon, IMDb: 8.4)
+  cn:CourageTheCowardlyDog → Korkak Köpek Courage  (1999-2002,  4 sezon, IMDb: 8.3)
+  cn:TheAmazingWorldOfGumball → Gumball'ın Dünyası (2011-2019,  6 sezon, IMDb: 8.1)
+  cn:JohnnyBravo           → Johnny Bravo          (1997-2004,  4 sezon, IMDb: 6.9)
+  cn:EdEddnEddy            → Ed, Edd ve Eddy       (1999-2009,  6 sezon, IMDb: 7.9)
+  cn:Chowder               → Chowder               (2007-2010,  3 sezon, IMDb: 8.0)
+  cn:TotalDramaIsland      → Total Drama Island    (2007-2008,  1 sezon, IMDb: 7.9)
+
+Bilim Kurgu Dizileri:
+  cn:Ben10                 → Ben 10                (2005-2008,  4 sezon, IMDb: 7.4)
+  cn:GeneratorRex          → Generator Rex         (2010-2013,  3 sezon, IMDb: 7.3)
+
+---------------------------------
+  BİREYLER - KARAKTERLER
+---------------------------------
+
+Kahramanlar:
+  cn:Finn            → Adventure Time
+  cn:Jake            → Adventure Time
+  cn:Steven          → Steven Universe
+  cn:Garnet          → Steven Universe
+  cn:Amethyst        → Steven Universe
+  cn:Pearl           → Steven Universe
+  cn:Jack            → Samurai Jack
+  cn:Blossom         → The Powerpuff Girls
+  cn:Bubbles         → The Powerpuff Girls
+  cn:Buttercup       → The Powerpuff Girls
+  cn:Dexter          → Dexter's Laboratory
+  cn:BenTennyson     → Ben 10
+  cn:Gwen            → Ben 10
+  cn:Kevin           → Ben 10
+  cn:Mordecai        → Regular Show
+  cn:Rigby           → Regular Show
+  cn:Courage         → Courage the Cowardly Dog
+  cn:Robin           → Teen Titans
+  cn:Starfire        → Teen Titans
+  cn:Raven           → Teen Titans
+  cn:BeastBoy        → Teen Titans
+  cn:Cyborg          → Teen Titans
+  cn:Rex             → Generator Rex
+
+Kötü Adamlar:
+  cn:IceKing         → Adventure Time
+  cn:Aku             → Samurai Jack
+  cn:MojoJojo        → The Powerpuff Girls
+  cn:Vilgax          → Ben 10
+
+Yan Karakterler:
+  cn:DeeDee          → Dexter's Laboratory
+  cn:PrincessBubblegum → Adventure Time
+  cn:Benson          → Regular Show
+  cn:GrandpaMax      → Ben 10
+  cn:Muriel          → Courage the Cowardly Dog
+  cn:Eustace         → Courage the Cowardly Dog
+  cn:Wirt            → Over the Garden Wall
+  cn:Greg            → Over the Garden Wall
+
+---------------------------------
+  BİREYLER - YARATICLAR
+---------------------------------
+
+  cn:PendletonWard        → Adventure Time
+  cn:RebeccaSugar         → Steven Universe
+  cn:GennedyTartakovsky   → Samurai Jack, Dexter's Laboratory
+  cn:CraigMcCracken       → The Powerpuff Girls
+  cn:JGQuintel            → Regular Show
+
+---------------------------------
+  BİREYLER - YAPIMCI ŞİRKETLER
+---------------------------------
+
+  cn:CartoonNetworkStudios → Cartoon Network Studios (ABD)
+
+---------------------------------
+  BİREYLER - PLATFORMLAR
+---------------------------------
+
+  cn:CartoonNetworkTV  → Cartoon Network TV Kanalı
+  cn:BoomerangKanali   → Boomerang Kanalı
+  cn:HBOMaxPlatformu   → HBO Max Platformu
+
+---------------------------------
+  BİREYLER - ÜLKELER
+---------------------------------
+
+  cn:ABD       → Amerika Birleşik Devletleri
+  cn:Ingiltere → Birleşik Krallık
+  cn:Kanada    → Kanada
+
+---------------------------------
+  BİREYLER - ÖDÜLLER
+---------------------------------
+
+  cn:EmmyOdulu  → Primetime Emmy Ödülü
+  cn:AnnieOdulu → Annie Ödülü
+  cn:BAFTAOdulu → BAFTA Ödülü
+
+---------------------------------
+  BİREYLER - MÜZİK
+---------------------------------
+
+  cn:AdventureTimeMuzik   → Adventure Time Soundtrack
+  cn:StevenUniverseMuzik  → Steven Universe Soundtrack
+  cn:RegularShowMuzik     → Regular Show Soundtrack
+
+---------------------------------
+  BİREYLER - TEMALAR
+---------------------------------
+
+  cn:Arkadaşlık    → Dostluk ve birliktelik teması
+  cn:İyilikKötülük → İyi ile kötünün mücadelesi teması
+  cn:Macera        → Keşif ve macera teması
+  cn:Aile          → Aile bağları ve sevgi teması
+  cn:Cesaret       → Yüzleşme ve cesaret teması
+
+---------------------------------
+  BİREYLER - SES OYUNCULARI
+---------------------------------
+
+  cn:JohnDiMaggio  → Jake (Adventure Time)
+  cn:JeremyShada   → Finn (Adventure Time)
+  cn:ZachCallison  → Steven (Steven Universe)
+  cn:AmeWong       → Garnet (Steven Universe)
+
+---------------------------------
+  BİREYLER - YAYINCILAR
+---------------------------------
+
+  cn:CartoonNetworkKanali → Cartoon Network Ana Kanalı
+  cn:BoomerangKanali      → Boomerang Kanalı
+  cn:HBOMaxPlatformu      → HBO Max Dijital Platformu
