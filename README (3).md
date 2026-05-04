@@ -1,0 +1,3 @@
+# 🎨 Cartoon Network Çizgi Film Ontolojisi
+
+Bu depo, **Cartoon Network** yayın platformunda yayınlanan çizgi filmleri, karakterleri, yaratıcıları, yapımcı şirketleri, temalar, ödüller, ses oyuncuları ve platformları modelleyen kapsamlı bir OWL ontolojisi içermektedir. Ontoloji, WebProtégé ortamında geliştirilmiş olup XML, RDF ve Turtle olmak üzere üç farklı formatta sunulmaktadır. Toplam 19 sınıf, 20 nesne özelliği, 12 veri özelliği ve 60'tan fazla birey içeren bu ontoloji; Adventure Time, Steven Universe, Samurai Jack, The Powerpuff Girls, Dexter's Laboratory, Ben 10, Regular Show, Courage the Cowardly Dog ve daha birçok ikonik Cartoon Network yapımını kapsamakta olup diziler arasındaki tema, yapımcı, yayıncı ve karakter ilişkilerini anlamsal olarak temsil etmektedir.
